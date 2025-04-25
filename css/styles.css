@@ -411,10 +411,18 @@ a {
   background-color: #31d0aa;
 }
 
+.text-par {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
 .form-foot {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .label-form {
@@ -427,10 +435,21 @@ a {
 }
 
 .email-form {
-  padding: 8px 16px;
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border: 1px solid #fff;
-  flex: 1;
+  color: #ffffff;
+}
+
+.email-form::placeholder {
+  color: #ffffff;
 }
 
 .btn-form {
@@ -439,13 +458,22 @@ a {
   padding: 8px 24px;
   border-radius: 4px;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   cursor: pointer;
+  min-width: 165px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
 }
 
 .icon-btn {
   fill: #fff;
+  margin-left: 16px;
 }
 
 .modal-overley {
@@ -459,8 +487,12 @@ a {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-property: visibility, opacity, pointer-events;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overley.is-open {
@@ -503,6 +535,11 @@ a {
 .btn-close:hover {
   background-color: #404bbf;
   fill: #fff;
+  border: none;
+}
+
+.cloze-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -521,11 +558,11 @@ a {
 .modal-form-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: block;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 .modal-form-div {
   position: relative;
@@ -537,6 +574,8 @@ a {
   border-radius: 4px;
   padding-left: 38px;
   outline: transparent;
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-imput:focus {
@@ -549,6 +588,7 @@ a {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-imput:focus + .modal-form-svg {
@@ -566,6 +606,13 @@ a {
   height: 120px;
   padding: 8px 16px;
   resize: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment:focus {
@@ -595,13 +642,16 @@ a {
   align-items: center;
   background-color: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-label {
   cursor: pointer;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   fill: transparent;
